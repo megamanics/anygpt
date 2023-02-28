@@ -25,11 +25,13 @@
   },
   "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
-    "@actions/core":"latest"
+    "@actions/core": "latest",
+    "@actions/github": "^5.1.1",
+    "github": "github:actions/github"
   },
   "devDependencies": {
-    "@vercel/ncc":"latest",
-    "eslint":"latest",
-    "jest":"latest"
+    "@vercel/ncc": "latest",
+    "eslint": "latest",
+    "jest": "latest"
   }
 }

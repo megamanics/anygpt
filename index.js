@@ -1,10 +1,15 @@
 const core = require('@actions/core');
+const github = require('@actions/github');
 const wait = require('./wait');
 
 
 // most @actions toolkit packages have async methods
 async function run() {
   try {
+    const token = core.getInput('token');
+    core.info(`token: ${token}`);
+    const octokit = github.getOctokit(token);
+
     const ms = core.getInput('milliseconds');
     core.info(`Waiting ${ms} milliseconds ...`);
 
